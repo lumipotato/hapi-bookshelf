@@ -158,4 +158,4 @@ const getAllBooksHandler = (request, h) => {
   return response;
 };
 
-export default { addBookHandler, getAllBooksHandler };
+module.exports = { addBookHandler, getAllBooksHandler };

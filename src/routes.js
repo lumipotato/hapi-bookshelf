@@ -13,4 +13,4 @@ const routes = [
   },
 ];
 
-export default routes;
+module.exports = routes;
