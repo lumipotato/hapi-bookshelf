@@ -1,28 +1,15 @@
+const { addBookHandler, getAllBooksHandler } = require('./handler');
+
 const routes = [
   {
-    method: 'GET',
-    path: '/',
-    handler: (request, h) => 'Homepage',
-  },
-  {
-    method: '*',
-    path: '/',
-    handler: (request, h) => 'Halaman tidak dapat diakses dengan method tersebut',
+    method: 'POST',
+    path: '/books',
+    handler: addBookHandler,
   },
   {
     method: 'GET',
-    path: '/about',
-    handler: (request, h) => 'About page',
-  },
-  {
-    method: '*',
-    path: '/about',
-    handler: (request, h) => 'Halaman tidak dapat diakses dengan method',
-  },
-  {
-    method: '*',
-    path: '/{any*}',
-    handler: (request, h) => 'Halaman tidak ditemukan',
+    path: '/books',
+    handler: getAllBooksHandler,
   },
 ];
 
